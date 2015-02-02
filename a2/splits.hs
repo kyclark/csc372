@@ -1,7 +1,10 @@
 splits :: [a] -> [([a], [a])]
+splits [_] = error "shortList"
+splits xs = f [] xs
 
-splits [] = []
-splits (x:xs) 
-    | null xs = error "shortList"
-    | otherwise = [([x], xs)]
-
+f :: [a] -> [a] -> [([a], [a])]
+f xs [] = []
+f xs (y:ys) 
+    | null ys = []
+    | otherwise = (zs, ys) : f zs ys
+        where zs = xs ++ [y]
