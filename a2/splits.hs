@@ -8,3 +8,6 @@ f xs (y:ys)
     | null ys = []
     | otherwise = (zs, ys) : f zs ys
         where zs = xs ++ [y]
+
+g [] = []
+g (x:xs) = [[x] ++ xs] ++ g xs
