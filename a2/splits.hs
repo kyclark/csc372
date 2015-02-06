@@ -10,4 +10,5 @@ f xs (y:ys)
         where zs = xs ++ [y]
 
 g [] = []
-g (x:xs) = [[x] ++ xs] ++ g xs
+--g (x:xs) = [[x] ++ xs] ++ g xs
+g (x:xs) = [[x]] ++ g xs
