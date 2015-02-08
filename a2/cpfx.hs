@@ -1,9 +1,11 @@
+{-
 cpfx :: [[Char]] -> [Char]
 cpfx [] = ""
 cpfx [x] = x
 cpfx all@(x:xs) = 
     t bits all
     where bits = splits x
+-}
 
 heads :: Int -> [[Char]] -> [[Char]]
 heads 0 _ = []

@@ -18,8 +18,8 @@ fc (a, b) c d
 fd (a, b) (c, d) 
     | b + 1 > 10 = (d, [a])
     | otherwise = (a, [a])
+        where x = take b "foo"
+              y = take c "foo"
 
 -- fe :: [[[Int]]] -> [[[a]]]
-fe [[[a]]] = 
-    let x = replicate a 'a' 
-    [[
+fe [[[a]]] = replicate a 'a'

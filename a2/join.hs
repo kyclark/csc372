@@ -1,5 +1,5 @@
-jin :: [Char] -> [[Char]] -> [Char]
-jin _ [] = ""
-jin s (x:xs) 
+join :: [Char] -> [[Char]] -> [Char]
+join _ [] = ""
+join s (x:xs) 
     | null xs = x
-    | otherwise = x ++ s ++ jin s xs
+    | otherwise = x ++ s ++ join s xs
