@@ -9,6 +9,8 @@ f xs (y:ys)
     | otherwise = (zs, ys) : f zs ys
         where zs = xs ++ [y]
 
-g [] = []
---g (x:xs) = [[x] ++ xs] ++ g xs
-g (x:xs) = [[x]] ++ g xs
+--g :: [a] -> [a]
+g xs = g' xs []
+g' [] _ = []
+g' (x:xs) acc = (acc ++ x) : g' xs acc
+
